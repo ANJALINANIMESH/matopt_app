@@ -11,7 +11,7 @@ import plotly.express as px
 
 # ── Page configuration ────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="LCA Material Optimization",
+    page_title="mat_opt (anjnim)",
     page_icon=None,
     layout="wide",
     initial_sidebar_state="expanded",
