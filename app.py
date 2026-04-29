@@ -22,7 +22,7 @@ st.markdown(
     """
     <style>
         html, body, [data-testid="stAppViewContainer"] {
-            background-color: #ffffff;
+            background-color: #0e1117;
             color: #e0e0e0;
             font-family: 'Segoe UI', sans-serif;
         }
