@@ -1,6 +1,6 @@
 """
-Lower Control Arm — Material Optimization
-Multi-criteria decision analysis for automotive suspension component material selection.
+Material Optimization
+Multi-criteria decision analysis for material selection.
 """
 
 import streamlit as st
@@ -127,7 +127,7 @@ st.markdown(
 # manufacturability 1–10       — higher is better
 
 MATERIALS = {
-    "Steel": {
+    "Structural Steel": {
         "density": 7.85,
         "yield_strength": 350.0,
         "youngs_modulus": 200.0,
