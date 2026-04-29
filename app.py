@@ -22,7 +22,7 @@ st.markdown(
     """
     <style>
         html, body, [data-testid="stAppViewContainer"] {
-            background-color: #0e1117;
+            background-color: #ffffff;
             color: #e0e0e0;
             font-family: 'Segoe UI', sans-serif;
         }
@@ -126,16 +126,27 @@ st.markdown(
 # corrosion_score  1–10        — higher is better
 # manufacturability 1–10       — higher is better
 
-MATERIALS: dict[str, dict[str, float]] = {
-    "AISI 1045 Steel": {
+MATERIALS = {
+    "Steel": {
         "density": 7.85,
-        "yield_strength": 530.0,
+        "yield_strength": 350.0,
         "youngs_modulus": 200.0,
-        "fatigue_strength": 310.0,
-        "cost_index": 2.0,
+        "fatigue_strength": 220.0,
+        "cost_index": 2.5,
         "corrosion_score": 3.0,
         "manufacturability": 8.5,
     },
+
+    "Stainless Steel": {
+        "density": 7.90,
+        "yield_strength": 290.0,
+        "youngs_modulus": 193.0,
+        "fatigue_strength": 240.0,
+        "cost_index": 5.5,
+        "corrosion_score": 9.0,
+        "manufacturability": 7.0,
+    },
+
     "HSLA Steel": {
         "density": 7.80,
         "yield_strength": 700.0,
@@ -145,25 +156,18 @@ MATERIALS: dict[str, dict[str, float]] = {
         "corrosion_score": 4.0,
         "manufacturability": 7.5,
     },
-    "Aluminum 6061-T6": {
+
+    "Aluminium": {
         "density": 2.70,
-        "yield_strength": 276.0,
-        "youngs_modulus": 68.9,
-        "fatigue_strength": 97.0,
-        "cost_index": 4.5,
+        "yield_strength": 250.0,
+        "youngs_modulus": 69.0,
+        "fatigue_strength": 95.0,
+        "cost_index": 4.0,
         "corrosion_score": 7.5,
         "manufacturability": 8.0,
     },
-    "Aluminum 7075-T6": {
-        "density": 2.81,
-        "yield_strength": 503.0,
-        "youngs_modulus": 71.7,
-        "fatigue_strength": 159.0,
-        "cost_index": 6.0,
-        "corrosion_score": 5.5,
-        "manufacturability": 6.5,
-    },
-    "Titanium Ti-6Al-4V": {
+
+    "Titanium": {
         "density": 4.43,
         "yield_strength": 880.0,
         "youngs_modulus": 114.0,
@@ -172,6 +176,17 @@ MATERIALS: dict[str, dict[str, float]] = {
         "corrosion_score": 9.5,
         "manufacturability": 4.0,
     },
+
+    "Cast Iron": {
+        "density": 7.20,
+        "yield_strength": 200.0,
+        "youngs_modulus": 130.0,
+        "fatigue_strength": 110.0,
+        "cost_index": 2.0,
+        "corrosion_score": 4.0,
+        "manufacturability": 9.0,
+    },
+
     "CFRP Composite": {
         "density": 1.60,
         "yield_strength": 600.0,
