@@ -167,16 +167,6 @@ MATERIALS = {
         "manufacturability": 8.0,
     },
 
-    "Titanium": {
-        "density": 4.43,
-        "yield_strength": 880.0,
-        "youngs_modulus": 114.0,
-        "fatigue_strength": 510.0,
-        "cost_index": 9.5,
-        "corrosion_score": 9.5,
-        "manufacturability": 4.0,
-    },
-
     "Cast Iron": {
         "density": 7.20,
         "yield_strength": 200.0,
